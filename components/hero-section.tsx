@@ -72,12 +72,16 @@ export default function HeroSection() {
             fw="bold"
             variant="gradient"
             gradient={{
-              from:
-                !isMounted ? (colorScheme === "dark" ? "blue.7" : "blue.8") ?
-                "dark",
-              to:
-                !isMounted ? (colorScheme === "dark" ? "blue.0" : "blue.9") ?
-                "dark",
+              from: !isMounted
+                ? colorScheme === "dark"
+                  ? "blue.7"
+                  : "blue.8"
+                : "dark",
+              to: !isMounted
+                ? colorScheme === "dark"
+                  ? "blue.0"
+                  : "blue.9"
+                : "dark",
               deg: 90,
             }}
             ta={{ base: "center", md: "start" }}
