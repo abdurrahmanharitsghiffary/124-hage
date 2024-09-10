@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/data/*": ["data/*"],
+      "@/lib/*": ["lib/*"]
+    },
+    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -22,15 +24,15 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["node"]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "tailwind.config.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
