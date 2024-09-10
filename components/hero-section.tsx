@@ -24,7 +24,7 @@ export default function HeroSection() {
       component="section"
       w="100%"
       mih="100dvh"
-      pt={{ base: "3rem", md: "5rem" }}
+      pt={{ base: "1rem", md: "5rem" }}
       px="md"
       className={cn(
         colorScheme === "dark"
