@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SiAdonisjs,
   SiAdonisjsHex,
@@ -54,6 +56,7 @@ import {
   SiTypescriptHex,
 } from "@icons-pack/react-simple-icons";
 import { ActionIcon, Box, Grid, GridCol, Text } from "@mantine/core";
+import { motion } from "framer-motion";
 import React from "react";
 
 enum LEVEL {
@@ -243,7 +246,15 @@ const skills = [
 
 export default function Skills() {
   return (
-    <Box component="section" className="w-full !pt-24 relative">
+    <Box
+      component={motion.section}
+      initial={{ y: "50%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      className="w-full !pt-24 relative"
+      id="skills"
+    >
       <Text fz="h1" fw="bold" mx="auto" ta="center">
         Skills
       </Text>

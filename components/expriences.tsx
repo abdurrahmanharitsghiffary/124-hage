@@ -1,11 +1,20 @@
 "use client";
-import { Text, Timeline } from "@mantine/core";
+import { Box, Text, Timeline } from "@mantine/core";
 import { IconBuilding, IconSchool } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function Expriences() {
   return (
-    <section id="exprience" className="w-full flex flex-col gap-4 !pt-24">
+    <Box
+      component={motion.section}
+      initial={{ x: "50%", opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true, amount: 0.5 }}
+      id="exprience"
+      className="w-full flex flex-col gap-4 !pt-24"
+    >
       <Text fz="h1" fw="bold" mx="auto">
         Education & Exprience
       </Text>
@@ -48,6 +57,6 @@ export default function Expriences() {
           </Text>
         </Timeline.Item>
       </Timeline>
-    </section>
+    </Box>
   );
 }

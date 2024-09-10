@@ -1,9 +1,20 @@
+"use client";
+
 import { Box, Text } from "@mantine/core";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function About() {
   return (
-    <Box id="about" component="section" className="flex w-full flex-col !pt-24">
+    <Box
+      id="about"
+      component={motion.section}
+      initial={{ x: "-50%", opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="flex w-full flex-col !pt-24"
+    >
       <Text fz="h1" fw="bold" mx="auto">
         About Me
       </Text>

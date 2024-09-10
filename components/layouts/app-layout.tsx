@@ -99,7 +99,9 @@ export function AppLayout({ children }: PropsWithChildren) {
         </UnstyledButton>
       </AppShell.Navbar>
 
-      <AppShell.Main p={0}>{children}</AppShell.Main>
+      <AppShell.Main p={0} className="overflow-hidden">
+        {children}
+      </AppShell.Main>
     </AppShell>
   );
 }
