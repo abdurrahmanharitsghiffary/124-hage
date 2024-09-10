@@ -10,16 +10,16 @@ import React, { ComponentProps } from "react";
 export default function SocialMediaIcons(props: ComponentProps<typeof Group>) {
   return (
     <Group {...props}>
-      <ActionIcon size="xl" radius="xl">
+      <ActionIcon size="lg" radius="lg">
         <IconBrandGithub />
       </ActionIcon>
-      <ActionIcon size="xl" radius="xl">
+      <ActionIcon size="lg" radius="lg">
         <IconBrandInstagram />
       </ActionIcon>
-      <ActionIcon size="xl" radius="xl">
+      <ActionIcon size="lg" radius="lg">
         <IconBrandLinkedin />
       </ActionIcon>
-      <ActionIcon size="xl" radius="xl">
+      <ActionIcon size="lg" radius="lg">
         <IconBrandWhatsapp />
       </ActionIcon>
     </Group>

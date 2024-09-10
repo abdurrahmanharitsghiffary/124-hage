@@ -97,7 +97,14 @@ export default function HeroSection() {
           >
             {text}
             <Cursor />
-          </Text>
+          </Text>{" "}
+          <BoxReveal
+            boxColor="var(--mantine-primary-color-filled)"
+            duration={1}
+            className="mx-auto md:mx-0"
+          >
+            <SocialMediaIcons />
+          </BoxReveal>
           <BoxReveal
             className="mx-auto md:mx-0"
             boxColor="var(--mantine-primary-color-filled)"
@@ -108,19 +115,11 @@ export default function HeroSection() {
                 className="!w-fit mt-4"
                 radius="xl"
                 size="lg"
-                mx={{ base: "auto", md: "0" }}
                 rightSection={<IconDownload />}
               >
                 Download CV
               </Button>
             </CoolMode>
-          </BoxReveal>
-          <BoxReveal
-            boxColor="var(--mantine-primary-color-filled)"
-            duration={1}
-            className="mx-auto md:mx-0"
-          >
-            <SocialMediaIcons mx={{ base: "auto", md: "0" }} />
           </BoxReveal>
         </Box>
       </Box>
